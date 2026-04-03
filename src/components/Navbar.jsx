@@ -1,18 +1,24 @@
 export default function Navbar({ cartCount }) {
   return (
-    <div style={{
-      display: "flex",
-      justifyContent: "space-between",
-      padding: "15px",
-      borderBottom: "1px solid #ddd"
-    }}>
-      <h2>DigiTools</h2>
+    <header className="navbar">
+      <div className="container navbar-inner">
+        <div className="logo">DigiTools</div>
 
-      <div>
-        <span style={{ marginRight: "20px" }}>Products</span>
-        <span style={{ marginRight: "20px" }}>Pricing</span>
-        <span>🛒 Cart({cartCount})</span>
+        <nav className="nav-links">
+          <a href="#products">Products</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div className="nav-right">
+          <a href="/" className="login-link">Login</a>
+          <button className="primary-btn">
+            Cart <span className="cart-badge">{cartCount}</span>
+          </button>
+        </div>
       </div>
-    </div>
+    </header>
   );
 }

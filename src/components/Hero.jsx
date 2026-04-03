@@ -1,70 +1,28 @@
+import heroImage from "../assets/hero-image.png";
 export default function Hero() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "60px 20px",
-        gap: "40px",
-        flexWrap: "wrap",
-      }}
-    >
-      <div style={{ flex: "1", minWidth: "280px" }}>
-        <h1 style={{ fontSize: "42px", marginBottom: "20px" }}>
-          Buy Smart Digital Tools For Modern Work
-        </h1>
+    <section className="hero">
+      <div className="container hero-grid">
+        <div>
+          <div className="hero-pill">✨ New AI Powered Tools Available</div>
 
-        <p style={{ fontSize: "18px", color: "#555", marginBottom: "25px", lineHeight: "1.6" }}>
-          Explore premium templates, AI tools, automation kits, and digital assets
-          that help creators, freelancers, and businesses work faster and better.
-        </p>
+          <h1 className="hero-title">Supercharge Your Digital Workflow</h1>
 
-        <div style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
-          <button
-            style={{
-              padding: "12px 20px",
-              backgroundColor: "black",
-              color: "white",
-              border: "none",
-              borderRadius: "8px",
-              cursor: "pointer",
-            }}
-          >
-            Explore Products
-          </button>
+          <p className="hero-text">
+            Access premium AI tools, design assets, templates, and productivity
+            software all in one place. Start creating faster today.
+          </p>
 
-          <button
-            style={{
-              padding: "12px 20px",
-              backgroundColor: "white",
-              color: "black",
-              border: "1px solid #ccc",
-              borderRadius: "8px",
-              cursor: "pointer",
-            }}
-          >
-            View Pricing
-          </button>
+          <div className="hero-actions">
+            <button className="primary-btn">Explore Products</button>
+            <button className="secondary-btn">Watch Demo</button>
+          </div>
+        </div>
+
+        <div className="hero-image-wrap">
+          <img src={heroImage} alt="Digital workflow" className="hero-image" />
         </div>
       </div>
-
-      <div
-        style={{
-          flex: "1",
-          minWidth: "280px",
-          height: "300px",
-          backgroundColor: "#f3f3f3",
-          borderRadius: "16px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: "20px",
-          color: "#777",
-        }}
-      >
-        Banner Image / Visual
-      </div>
-    </div>
+    </section>
   );
 }

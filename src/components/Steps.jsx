@@ -1,61 +1,32 @@
 export default function Steps() {
   return (
-    <div style={{ padding: "60px 20px", backgroundColor: "#f8f8f8" }}>
-      <h1 style={{ textAlign: "center", marginBottom: "40px" }}>
-        How It Works
-      </h1>
+    <section className="section" id="features">
+      <div className="container">
+        <h2 className="section-title">Get Started In 3 Steps</h2>
+        <p className="section-subtitle">
+          Start using premium digital tools in minutes, not hours.
+        </p>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-          gap: "20px",
-          maxWidth: "1000px",
-          margin: "0 auto",
-        }}
-      >
-        <div
-          style={{
-            backgroundColor: "white",
-            padding: "25px",
-            borderRadius: "12px",
-            border: "1px solid #ddd",
-            textAlign: "center",
-          }}
-        >
-          <h2>Step 1</h2>
-          <h3>Create Account</h3>
-          <p>Sign up and get access to premium digital tools and resources.</p>
-        </div>
+        <div className="steps-grid">
+          <div className="step-card">
+            <div className="step-icon">01</div>
+            <h3>Create Account</h3>
+            <p>Sign up for free and access your dashboard in a few clicks.</p>
+          </div>
 
-        <div
-          style={{
-            backgroundColor: "white",
-            padding: "25px",
-            borderRadius: "12px",
-            border: "1px solid #ddd",
-            textAlign: "center",
-          }}
-        >
-          <h2>Step 2</h2>
-          <h3>Choose Product</h3>
-          <p>Browse products and add the tools you need to your cart.</p>
-        </div>
+          <div className="step-card">
+            <div className="step-icon">02</div>
+            <h3>Choose Products</h3>
+            <p>Browse our curated tools and select the ones that fit your needs.</p>
+          </div>
 
-        <div
-          style={{
-            backgroundColor: "white",
-            padding: "25px",
-            borderRadius: "12px",
-            border: "1px solid #ddd",
-            textAlign: "center",
-          }}
-        >
-          <h2>Step 3</h2>
-          <h3>Checkout & Use</h3>
-          <p>Complete checkout and start using your selected digital tools.</p>
+          <div className="step-card">
+            <div className="step-icon">03</div>
+            <h3>Start Creating</h3>
+            <p>Download and start using your premium tools immediately.</p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
