@@ -1,3 +1,5 @@
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -12,16 +14,21 @@ function App() {
   const [view, setView] = useState("products");
   const addToCart = (product) => {
   setCart([...cart, product]);
+  toast.success(`${product.name} added to cart`);
   };
   const removeFromCart = (indexToRemove) => {
+  const removedItem = cart[indexToRemove];
   const updatedCart = cart.filter((item, index) => index !== indexToRemove);
   setCart(updatedCart);
+  toast.info(`${removedItem.name} removed from cart`);
   };
   const handleCheckout = () => {
   setCart([]);
-};
+  toast.success("Checkout complete");
+  };
   return (
     <div>
+      <ToastContainer />
       <Navbar cartCount={cart.length} />
       <Hero />
       <Stats />
