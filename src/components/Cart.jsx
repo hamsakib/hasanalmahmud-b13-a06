@@ -5,6 +5,9 @@ export default function Cart({ cart, removeFromCart, handleCheckout }) {
       <h1 style={{ textAlign: "center", marginBottom: "30px" }}>
         Your Cart
       </h1>
+      <p style={{ textAlign: "center", color: "#666", marginBottom: "30px" }}>
+  Selected Items: {cart.length}
+</p>
 
       {cart.length === 0 ? (
         <p style={{ textAlign: "center", color: "#666" }}>

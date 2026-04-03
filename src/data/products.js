@@ -6,6 +6,7 @@ export const products = [
     price: 29,
     period: "monthly",
     tagType: "Popular",
+    icon: "✍️",
     features: ["Unlimited writing", "SEO support", "Grammar tools"],
   },
   {
@@ -15,6 +16,7 @@ export const products = [
     price: 49,
     period: "one-time",
     tagType: "Best Seller",
+    icon: "🎨",
     features: ["200+ templates", "Editable layouts", "Commercial use"],
   },
   {
@@ -24,6 +26,7 @@ export const products = [
     price: 19,
     period: "monthly",
     tagType: "New",
+    icon: "🖼️",
     features: ["10k+ assets", "Weekly uploads", "Commercial license"],
   },
   {
@@ -33,6 +36,7 @@ export const products = [
     price: 79,
     period: "yearly",
     tagType: "New",
+    icon:"⚙️",
     features: ["50+ workflows", "App integrations", "Auto reports"],
   },
   {
@@ -42,6 +46,7 @@ export const products = [
     price: 15,
     period: "one-time",
     tagType: "Popular",
+    icon: "📄",
     features: ["ATS optimized", "PDF export", "Cover letter builder"],
   },
   {
@@ -51,6 +56,7 @@ export const products = [
     price: 39,
     period: "monthly",
     tagType: "Best Seller",
+    icon: "📱",
     features: ["Content calendar", "500+ captions", "Ready post formats"],
   },
 ];

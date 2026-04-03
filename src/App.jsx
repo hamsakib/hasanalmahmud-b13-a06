@@ -32,9 +32,14 @@ function App() {
   toast.info(`${removedItem.name} removed from cart`);
   };
   const handleCheckout = () => {
+  if (cart.length === 0) {
+    toast.error("Your cart is already empty");
+    return;
+  }
+
   setCart([]);
   toast.success("Checkout complete");
-  };
+};
   return (
     <div>
       <ToastContainer />
@@ -68,7 +73,7 @@ function App() {
       cursor: "pointer",
     }}
   >
-    Cart
+   Cart ({cart.length})
   </button>
 </div>
 

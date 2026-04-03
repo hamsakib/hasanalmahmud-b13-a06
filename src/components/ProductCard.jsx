@@ -9,6 +9,9 @@ export default function ProductCard({ product, addToCart, addedProductId }) {
         backgroundColor: "white",
       }}
     >
+        <div style={{ fontSize: "32px", marginBottom: "10px" }}>
+  {product.icon}
+</div>
       <p
         style={{
           display: "inline-block",
