@@ -7,6 +7,8 @@ import Stats from "./components/Stats";
 import ProductCard from "./components/ProductCard";
 import Cart from "./components/Cart";
 import Steps from "./components/Steps";
+import Pricing from "./components/Pricing";
+import Footer from "./components/Footer";
 import { products } from "./data/products";
 
 
@@ -102,6 +104,8 @@ function App() {
 )}
 
 <Steps />
+<Pricing />
+<Footer />
     </div>
   );
 }
