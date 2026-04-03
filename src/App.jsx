@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import ProductCard from "./components/ProductCard";
 import Cart from "./components/Cart";
+import Steps from "./components/Steps";
 import { products } from "./data/products";
 
 
@@ -69,7 +70,7 @@ function App() {
   </button>
 </div>
 
-      {view === "products" ? (
+  {view === "products" ? (
   <div style={{ padding: "60px 20px", backgroundColor: "#f8f8f8" }}>
     <h1 style={{ textAlign: "center", marginBottom: "40px" }}>
       Our Products
@@ -99,6 +100,8 @@ function App() {
   handleCheckout={handleCheckout}
 />
 )}
+
+<Steps />
     </div>
   );
 }
