@@ -63,18 +63,18 @@ function App() {
   </button>
 
   <button
-    onClick={() => setView("cart")}
-    style={{
-      padding: "12px 20px",
-      backgroundColor: view === "cart" ? "black" : "#ddd",
-      color: view === "cart" ? "white" : "black",
-      border: "none",
-      borderRadius: "8px",
-      cursor: "pointer",
-    }}
-  >
-   Cart ({cart.length})
-  </button>
+  onClick={() => setView("cart")}
+  style={{
+    padding: "12px 20px",
+    backgroundColor: view === "cart" ? "black" : "#ddd",
+    color: view === "cart" ? "white" : "black",
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer",
+  }}
+>
+  Cart ({cart.length})
+</button>
 </div>
 
   {view === "products" ? (

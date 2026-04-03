@@ -11,7 +11,7 @@ export default function Navbar({ cartCount }) {
       <div>
         <span style={{ marginRight: "20px" }}>Products</span>
         <span style={{ marginRight: "20px" }}>Pricing</span>
-        <span>Cart ({cartCount})</span>
+        <span>🛒 Cart({cartCount})</span>
       </div>
     </div>
   );
