@@ -98,6 +98,7 @@ function App() {
 
 <Steps />
 <Pricing />
+<Cta/>
 <Footer />
     </div>
   );

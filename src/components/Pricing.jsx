@@ -1,47 +1,38 @@
-export default function Pricing() {
+export default function Steps() {
   return (
-    <section className="section" id="pricing">
+    <section className="section steps-section" id="features">
       <div className="container">
-        <h2 className="section-title">Simple, Transparent Pricing</h2>
+        <h2 className="section-title">Get Started In 3 Steps</h2>
         <p className="section-subtitle">
-          Choose the plan that fits your needs. Upgrade or downgrade anytime.
+          Start using premium digital tools in minutes, not hours.
         </p>
 
-        <div className="pricing-grid">
-          <div className="pricing-card">
-            <h3>Starter</h3>
-            <div className="pricing-price">$0</div>
-            <p>Perfect for getting started</p>
-            <ul className="pricing-list">
-              <li>Access to 10 free tools</li>
-              <li>Basic templates</li>
-              <li>Community support</li>
-            </ul>
-            <button className="buy-btn">Get Started Free</button>
+        <div className="steps-grid">
+          <div className="step-card">
+            <div className="step-badge">01</div>
+            <div className="step-icon-wrap">
+              <div className="step-icon">👤</div>
+            </div>
+            <h3>Create Account</h3>
+            <p>Sign up for free in seconds. No credit card required to get started.</p>
           </div>
 
-          <div className="pricing-card featured">
-            <h3>Pro</h3>
-            <div className="pricing-price">$29</div>
-            <p>Best for professionals</p>
-            <ul className="pricing-list">
-              <li>Access to all premium tools</li>
-              <li>Unlimited templates</li>
-              <li>Priority support</li>
-            </ul>
-            <button className="secondary-btn">Start Pro Trial</button>
+          <div className="step-card">
+            <div className="step-badge">02</div>
+            <div className="step-icon-wrap">
+              <div className="step-icon">📦</div>
+            </div>
+            <h3>Choose Products</h3>
+            <p>Browse our curated tools and select the products that fit your needs.</p>
           </div>
 
-          <div className="pricing-card">
-            <h3>Enterprise</h3>
-            <div className="pricing-price">$99</div>
-            <p>Built for businesses</p>
-            <ul className="pricing-list">
-              <li>Everything in Pro</li>
-              <li>Team collaboration</li>
-              <li>Custom integration</li>
-            </ul>
-            <button className="buy-btn">Contact Sales</button>
+          <div className="step-card">
+            <div className="step-badge">03</div>
+            <div className="step-icon-wrap">
+              <div className="step-icon">🚀</div>
+            </div>
+            <h3>Start Creating</h3>
+            <p>Download and start using your premium tools immediately after checkout.</p>
           </div>
         </div>
       </div>

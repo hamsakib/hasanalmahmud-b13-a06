@@ -13,10 +13,16 @@ export default function Navbar({ cartCount }) {
         </nav>
 
         <div className="nav-right">
+          <div className="nav-cart-icon-wrap">
+            <span className="nav-cart-icon">🛒</span>
+            {cartCount > 0 && <span className="nav-cart-count">{cartCount}</span>}
+          </div>
+
           <a href="/" className="login-link">Login</a>
-          <button className="primary-btn">
-            Cart <span className="cart-badge">{cartCount}</span>
-          </button>
+
+          <a href="#pricing" className="primary-btn nav-start-btn">
+            Get Started
+          </a>
         </div>
       </div>
     </header>

@@ -1,6 +1,6 @@
 export default function Steps() {
   return (
-    <section className="section" id="features">
+    <section className="section steps-section" id="features">
       <div className="container">
         <h2 className="section-title">Get Started In 3 Steps</h2>
         <p className="section-subtitle">
@@ -9,21 +9,30 @@ export default function Steps() {
 
         <div className="steps-grid">
           <div className="step-card">
-            <div className="step-icon">01</div>
+            <div className="step-badge">01</div>
+            <div className="step-icon-wrap">
+              <div className="step-icon">👤</div>
+            </div>
             <h3>Create Account</h3>
-            <p>Sign up for free and access your dashboard in a few clicks.</p>
+            <p>Sign up for free in seconds. No credit card required to get started.</p>
           </div>
 
           <div className="step-card">
-            <div className="step-icon">02</div>
+            <div className="step-badge">02</div>
+            <div className="step-icon-wrap">
+              <div className="step-icon">📦</div>
+            </div>
             <h3>Choose Products</h3>
-            <p>Browse our curated tools and select the ones that fit your needs.</p>
+            <p>Browse our curated tools and select the products that fit your needs.</p>
           </div>
 
           <div className="step-card">
-            <div className="step-icon">03</div>
+            <div className="step-badge">03</div>
+            <div className="step-icon-wrap">
+              <div className="step-icon">🚀</div>
+            </div>
             <h3>Start Creating</h3>
-            <p>Download and start using your premium tools immediately.</p>
+            <p>Download and start using your premium tools immediately after checkout.</p>
           </div>
         </div>
       </div>
