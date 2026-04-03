@@ -3,12 +3,18 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import ProductCard from "./components/ProductCard";
+import Cart from "./components/Cart";
 import { products } from "./data/products";
+
 
 function App() {
   const [cart, setCart] = useState([]);
   const addToCart = (product) => {
   setCart([...cart, product]);
+  };
+  const removeFromCart = (indexToRemove) => {
+  const updatedCart = cart.filter((item, index) => index !== indexToRemove);
+  setCart(updatedCart);
   };
   return (
     <div>
@@ -40,6 +46,8 @@ function App() {
           ))}
         </div>
       </div>
+      
+      <Cart cart={cart} removeFromCart={removeFromCart} />
     </div>
   );
 }
