@@ -1,63 +1,44 @@
 export default function Footer() {
   return (
-    <div
-      style={{
-        backgroundColor: "#111",
-        color: "white",
-        padding: "50px 20px",
-        marginTop: "40px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-          gap: "30px",
-        }}
-      >
-        <div>
-          <h2>DigiTools</h2>
-          <p style={{ color: "#bbb", lineHeight: "1.6" }}>
-            A digital tools buying platform for creators, freelancers,
-            students, and businesses who want smarter online solutions.
+    <footer className="footer" id="faq">
+      <div className="container footer-grid">
+        <div className="footer-col">
+          <h2 style={{ marginTop: 0 }}>DigiTools</h2>
+          <p>
+            Premium digital tools for creators, professionals, and businesses
+            with a smarter workflow.
           </p>
         </div>
 
-        <div>
-          <h3>Product</h3>
-          <p style={{ color: "#bbb" }}>Templates</p>
-          <p style={{ color: "#bbb" }}>Automation</p>
-          <p style={{ color: "#bbb" }}>Content Tools</p>
+        <div className="footer-col">
+          <h4>Product</h4>
+          <a href="/">Features</a>
+          <a href="/">Pricing</a>
+          <a href="/">Templates</a>
+          <a href="/">Integrations</a>
         </div>
 
-        <div>
-          <h3>Company</h3>
-          <p style={{ color: "#bbb" }}>About</p>
-          <p style={{ color: "#bbb" }}>Blog</p>
-          <p style={{ color: "#bbb" }}>Careers</p>
+        <div className="footer-col">
+          <h4>Company</h4>
+          <a href="/">About</a>
+          <a href="/">Blog</a>
+          <a href="/">Careers</a>
+          <a href="/">Press</a>
         </div>
 
-        <div>
-          <h3>Support</h3>
-          <p style={{ color: "#bbb" }}>Help Center</p>
-          <p style={{ color: "#bbb" }}>Contact</p>
-          <p style={{ color: "#bbb" }}>Terms & Privacy</p>
+        <div className="footer-col">
+          <h4>Resources</h4>
+          <a href="/">Documentation</a>
+          <a href="/">Help Center</a>
+          <a href="/">Community</a>
+          <a href="/">Contact</a>
         </div>
       </div>
 
-      <p
-        style={{
-          textAlign: "center",
-          marginTop: "30px",
-          color: "#888",
-          borderTop: "1px solid #333",
-          paddingTop: "20px",
-        }}
-      >
-        © 2026 DigiTools. All rights reserved.
-      </p>
-    </div>
+      <div className="container footer-bottom">
+        <div>© 2026 DigiTools. All rights reserved.</div>
+        <div>Privacy Policy · Terms of Service · Cookies</div>
+      </div>
+    </footer>
   );
 }

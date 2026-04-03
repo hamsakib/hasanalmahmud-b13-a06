@@ -1,112 +1,50 @@
 export default function Pricing() {
   return (
-    <div style={{ padding: "60px 20px", backgroundColor: "#ffffff" }}>
-      <h1 style={{ textAlign: "center", marginBottom: "40px" }}>
-        Pricing Plans
-      </h1>
+    <section className="section" id="pricing">
+      <div className="container">
+        <h2 className="section-title">Simple, Transparent Pricing</h2>
+        <p className="section-subtitle">
+          Choose the plan that fits your needs. Upgrade or downgrade anytime.
+        </p>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-          gap: "20px",
-          maxWidth: "1100px",
-          margin: "0 auto",
-        }}
-      >
-        <div
-          style={{
-            border: "1px solid #ddd",
-            borderRadius: "12px",
-            padding: "25px",
-            backgroundColor: "#f9f9f9",
-          }}
-        >
-          <h2>Starter</h2>
-          <h1>$0</h1>
-          <p>Perfect for trying basic tools</p>
-          <ul>
-            <li>Basic templates</li>
-            <li>Free access</li>
-            <li>Limited tools</li>
-          </ul>
-          <button
-            style={{
-              marginTop: "15px",
-              padding: "12px 18px",
-              backgroundColor: "black",
-              color: "white",
-              border: "none",
-              borderRadius: "8px",
-              cursor: "pointer",
-            }}
-          >
-            Get Started
-          </button>
-        </div>
+        <div className="pricing-grid">
+          <div className="pricing-card">
+            <h3>Starter</h3>
+            <div className="pricing-price">$0</div>
+            <p>Perfect for getting started</p>
+            <ul className="pricing-list">
+              <li>Access to 10 free tools</li>
+              <li>Basic templates</li>
+              <li>Community support</li>
+            </ul>
+            <button className="buy-btn">Get Started Free</button>
+          </div>
 
-        <div
-          style={{
-            border: "1px solid #ddd",
-            borderRadius: "12px",
-            padding: "25px",
-            backgroundColor: "#f3f3f3",
-          }}
-        >
-          <h2>Pro</h2>
-          <h1>$29/month</h1>
-          <p>Best for creators and freelancers</p>
-          <ul>
-            <li>All premium tools</li>
-            <li>Priority support</li>
-            <li>Advanced features</li>
-          </ul>
-          <button
-            style={{
-              marginTop: "15px",
-              padding: "12px 18px",
-              backgroundColor: "black",
-              color: "white",
-              border: "none",
-              borderRadius: "8px",
-              cursor: "pointer",
-            }}
-          >
-            Start Pro
-          </button>
-        </div>
+          <div className="pricing-card featured">
+            <h3>Pro</h3>
+            <div className="pricing-price">$29</div>
+            <p>Best for professionals</p>
+            <ul className="pricing-list">
+              <li>Access to all premium tools</li>
+              <li>Unlimited templates</li>
+              <li>Priority support</li>
+            </ul>
+            <button className="secondary-btn">Start Pro Trial</button>
+          </div>
 
-        <div
-          style={{
-            border: "1px solid #ddd",
-            borderRadius: "12px",
-            padding: "25px",
-            backgroundColor: "#f9f9f9",
-          }}
-        >
-          <h2>Enterprise</h2>
-          <h1>$99/month</h1>
-          <p>Best for growing teams and businesses</p>
-          <ul>
-            <li>Team collaboration</li>
-            <li>Custom support</li>
-            <li>Full access</li>
-          </ul>
-          <button
-            style={{
-              marginTop: "15px",
-              padding: "12px 18px",
-              backgroundColor: "black",
-              color: "white",
-              border: "none",
-              borderRadius: "8px",
-              cursor: "pointer",
-            }}
-          >
-            Contact Sales
-          </button>
+          <div className="pricing-card">
+            <h3>Enterprise</h3>
+            <div className="pricing-price">$99</div>
+            <p>Built for businesses</p>
+            <ul className="pricing-list">
+              <li>Everything in Pro</li>
+              <li>Team collaboration</li>
+              <li>Custom integration</li>
+            </ul>
+            <button className="buy-btn">Contact Sales</button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
