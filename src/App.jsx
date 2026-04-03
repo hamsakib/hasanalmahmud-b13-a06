@@ -17,6 +17,9 @@ function App() {
   const updatedCart = cart.filter((item, index) => index !== indexToRemove);
   setCart(updatedCart);
   };
+  const handleCheckout = () => {
+  setCart([]);
+};
   return (
     <div>
       <Navbar cartCount={cart.length} />
@@ -76,7 +79,11 @@ function App() {
     </div>
   </div>
 ) : (
-  <Cart cart={cart} removeFromCart={removeFromCart} />
+  <Cart
+  cart={cart}
+  removeFromCart={removeFromCart}
+  handleCheckout={handleCheckout}
+/>
 )}
     </div>
   );
