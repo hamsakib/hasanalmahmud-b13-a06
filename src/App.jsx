@@ -9,6 +9,7 @@ import { products } from "./data/products";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [view, setView] = useState("products");
   const addToCart = (product) => {
   setCart([...cart, product]);
   };
@@ -21,33 +22,62 @@ function App() {
       <Navbar cartCount={cart.length} />
       <Hero />
       <Stats />
+      <div style={{ padding: "30px 20px", textAlign: "center" }}>
+  <button
+    onClick={() => setView("products")}
+    style={{
+      padding: "12px 20px",
+      marginRight: "10px",
+      backgroundColor: view === "products" ? "black" : "#ddd",
+      color: view === "products" ? "white" : "black",
+      border: "none",
+      borderRadius: "8px",
+      cursor: "pointer",
+    }}
+  >
+    Product
+  </button>
 
-      <div style={{ padding: "60px 20px", backgroundColor: "#f8f8f8" }}>
-        <p style={{ textAlign: "center", marginBottom: "10px" }}>
-          Cart Items: {cart.length}
-        </p>
-        <h1 style={{ textAlign: "center", marginBottom: "40px" }}>
-          Our Products
-        </h1>
+  <button
+    onClick={() => setView("cart")}
+    style={{
+      padding: "12px 20px",
+      backgroundColor: view === "cart" ? "black" : "#ddd",
+      color: view === "cart" ? "white" : "black",
+      border: "none",
+      borderRadius: "8px",
+      cursor: "pointer",
+    }}
+  >
+    Cart
+  </button>
+</div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "20px",
-          }}
-        >
-          {products.map((product) => (
-           <ProductCard
-              key={product.id}
-              product={product}
-              addToCart={addToCart}
-            />
-          ))}
-        </div>
-      </div>
-      
-      <Cart cart={cart} removeFromCart={removeFromCart} />
+      {view === "products" ? (
+  <div style={{ padding: "60px 20px", backgroundColor: "#f8f8f8" }}>
+    <h1 style={{ textAlign: "center", marginBottom: "40px" }}>
+      Our Products
+    </h1>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+        gap: "20px",
+      }}
+    >
+      {products.map((product) => (
+        <ProductCard
+          key={product.id}
+          product={product}
+          addToCart={addToCart}
+        />
+      ))}
+    </div>
+  </div>
+) : (
+  <Cart cart={cart} removeFromCart={removeFromCart} />
+)}
     </div>
   );
 }
