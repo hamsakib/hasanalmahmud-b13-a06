@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
@@ -5,6 +6,7 @@ import ProductCard from "./components/ProductCard";
 import { products } from "./data/products";
 
 function App() {
+  const [cart, setCart] = useState([]);
   return (
     <div>
       <Navbar />
@@ -12,6 +14,9 @@ function App() {
       <Stats />
 
       <div style={{ padding: "60px 20px", backgroundColor: "#f8f8f8" }}>
+        <p style={{ textAlign: "center", marginBottom: "10px" }}>
+          Cart Items: {cart.length}
+        </p>
         <h1 style={{ textAlign: "center", marginBottom: "40px" }}>
           Our Products
         </h1>
