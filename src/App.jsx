@@ -12,9 +12,15 @@ import { products } from "./data/products";
 function App() {
   const [cart, setCart] = useState([]);
   const [view, setView] = useState("products");
+  const [addedProductId, setAddedProductId] = useState(null);
   const addToCart = (product) => {
   setCart([...cart, product]);
+  setAddedProductId(product.id);
   toast.success(`${product.name} added to cart`);
+
+  setTimeout(() => {
+    setAddedProductId(null);
+  }, 1500);
   };
   const removeFromCart = (indexToRemove) => {
   const removedItem = cart[indexToRemove];
@@ -81,6 +87,7 @@ function App() {
           key={product.id}
           product={product}
           addToCart={addToCart}
+          addedProductId={addedProductId}
         />
       ))}
     </div>

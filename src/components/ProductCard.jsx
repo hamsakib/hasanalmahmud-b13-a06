@@ -1,4 +1,5 @@
-export default function ProductCard({ product, addToCart }) {
+export default function ProductCard({ product, addToCart, addedProductId }) {
+    const isAdded = addedProductId === product.id;
   return (
     <div
       style={{
@@ -40,17 +41,17 @@ export default function ProductCard({ product, addToCart }) {
       <button
         onClick={() => addToCart(product)}
         style={{
-        marginTop: "20px",
-        padding: "12px 18px",
-        backgroundColor: "black",
-        color: "white",
-        border: "none",
-        borderRadius: "8px",
-        cursor: "pointer",
+            marginTop: "20px",
+            padding: "12px 18px",
+            backgroundColor: isAdded ? "green" : "black",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
         }}
-       >
-        Buy Now
-       </button>
+        >
+        {isAdded ? "Added to Cart" : "Buy Now"}
+        </button>
     </div>
   );
 }
