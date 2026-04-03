@@ -1,4 +1,4 @@
-export default function Navbar() {
+export default function Navbar({ cartCount }) {
   return (
     <div style={{
       display: "flex",
@@ -11,7 +11,7 @@ export default function Navbar() {
       <div>
         <span style={{ marginRight: "20px" }}>Products</span>
         <span style={{ marginRight: "20px" }}>Pricing</span>
-        <span>Cart (0)</span>
+        <span>Cart ({cartCount})</span>
       </div>
     </div>
   );
