@@ -1,4 +1,4 @@
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, addToCart }) {
   return (
     <div
       style={{
@@ -38,18 +38,19 @@ export default function ProductCard({ product }) {
       </ul>
 
       <button
+        onClick={() => addToCart(product)}
         style={{
-          marginTop: "20px",
-          padding: "12px 18px",
-          backgroundColor: "black",
-          color: "white",
-          border: "none",
-          borderRadius: "8px",
-          cursor: "pointer",
+        marginTop: "20px",
+        padding: "12px 18px",
+        backgroundColor: "black",
+        color: "white",
+        border: "none",
+        borderRadius: "8px",
+        cursor: "pointer",
         }}
-      >
+       >
         Buy Now
-      </button>
+       </button>
     </div>
   );
 }

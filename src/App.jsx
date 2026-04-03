@@ -7,6 +7,9 @@ import { products } from "./data/products";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const addToCart = (product) => {
+  setCart([...cart, product]);
+  };
   return (
     <div>
       <Navbar />
@@ -29,7 +32,11 @@ function App() {
           }}
         >
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+           <ProductCard
+              key={product.id}
+              product={product}
+              addToCart={addToCart}
+            />
           ))}
         </div>
       </div>
