@@ -566,7 +566,10 @@ a {
   gap: 24px;
 }
 
-.step-card,
+.step-card{
+  display: grid;
+  justify-items: center;
+}
 .pricing-card {
   background: white;
   border: 1px solid var(--border);
@@ -576,16 +579,17 @@ a {
 }
 
 .step-badge {
-  width: 58px;
-  height: 58px;
   border-radius: 50%;
-  display: grid;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
   place-items: center;
-  background: #f5edff;
-  color: var(--purple);
-  font-size: 22px;
+  background:var(--purple-dark);
+  color: var(--white);
+  font-size: 1rem;
   font-weight: 800;
   margin-bottom: 18px;
+  justify-content: center;
 }
 
 .step-card h3,
