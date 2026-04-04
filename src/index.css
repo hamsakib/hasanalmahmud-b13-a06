@@ -105,6 +105,13 @@ a {
   font-size: 14px;
   font-weight: 600;
 }
+.logo{
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(to right, var(--purple-dark), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .nav-links a:hover,
 .login-link:hover {
@@ -122,19 +129,11 @@ a {
   font-size: 14px;
   font-weight: 600;
 }
-.nav-cart-icon-wrap {
-  position: relative;
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-}
-.nav-cart-icon-wrap {
-  position: relative;
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
+
+.nav-cart-count{
+  color: red;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .primary-btn,
@@ -555,8 +554,12 @@ a {
   font-size: 14px;
 }
 
-/* STEPS */
-.steps-grid,
+.steps-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+
+}
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

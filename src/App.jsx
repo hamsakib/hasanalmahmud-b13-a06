@@ -95,8 +95,7 @@ function App() {
     )}
   </div>
 </section>
-
-<Steps />
+<Steps/>
 <Pricing />
 <Cta/>
 <Footer />
